@@ -1,0 +1,4 @@
+= quips
+
+This plugin diplays a random quip on the issue list page, and allows to add new
+quips.
