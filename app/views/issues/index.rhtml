@@ -2,7 +2,7 @@
     <h2><%=l(:label_issue_plural)%></h2>
     <% html_title(l(:label_issue_plural)) %>
 
-    <p id="quip"><%= Quip.random %></p>
+    <p id="quip">&bdquo;<%= link_to Quip.random, {:controller => 'quips', :action => 'new' } %>&rdquo;</p>
     <% content_for :header_tags do %>
         <%= stylesheet_link_tag 'quip', :plugin => 'redmine_quips' %>
     <% end %>
