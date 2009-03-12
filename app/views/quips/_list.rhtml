@@ -1,0 +1,4 @@
+<% for quip in quips %>
+<li><%= quip.text%> <%= link_to_remote(image_tag('delete.png'), :update => "list", :url => { :action => 'destroy', :id => quip }, :confirm => "Are you sure?")%>
+</li>
+<% end %>

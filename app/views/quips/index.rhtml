@@ -1,0 +1,7 @@
+<%= render :partial => 'form'%>
+
+<h2>Existing quips:</h2>
+
+<ul id="list">
+<%= render :partial => 'list', :locals => { :quips => @quips }%>
+</ul>
