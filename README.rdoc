@@ -6,4 +6,4 @@ quips.
 == Installation
 
  * Put code into REDMINE_HOME/vendor/plugins/redmine_quips
- * run rake db:migrate_plugins
+ * run rake db:migrate:plugins
