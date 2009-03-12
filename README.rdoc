@@ -2,3 +2,8 @@
 
 This plugin diplays a random quip on the issue list page, and allows to add new
 quips.
+
+== Installation
+
+ * Put code into REDMINE_HOME/vendor/plugins/redmine_quips
+ * run rake db:migrate_plugins
