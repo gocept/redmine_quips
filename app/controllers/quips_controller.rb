@@ -24,4 +24,9 @@ class QuipsController < ApplicationController
     end
     render :partial => "list", :locals => { :quips => Quip.find(:all) }
   end
+
+  def authorize(ctrl = params[:controller], action = params[:action])
+    allowed = User.current.allowed_to?({:controller => ctrl, :action => action}, nil, :global => true)
+    allowed ? true : deny_access
+  end
 end
