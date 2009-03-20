@@ -1,4 +1,6 @@
 class QuipsController < ApplicationController
+  before_filter :authorize
+
   def index
     @quips = Quip.find(:all)
   end
