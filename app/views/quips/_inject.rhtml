@@ -1,3 +1,4 @@
 <script type="text/javascript">
-new Insertion.After($$('#content h2')[0], '<%= render :partial => "quips/show" %>');
+new Insertion.Top($('sidebar'), '<%= render :partial => "quips/show" %>');
+$('main').removeClassName('nosidebar');
 </script>
