@@ -1,4 +1,8 @@
 <script type="text/javascript">
-new Insertion.Top($('sidebar'), '<%= render :partial => "quips/show" %>');
-$('main').removeClassName('nosidebar');
+<%
+quip = render(:partial => "quips/show")
+quip.gsub! '"', '\\"'
+%>
+new Insertion.Top($("sidebar"), "<%= quip %>");
+$("main").removeClassName("nosidebar");
 </script>
