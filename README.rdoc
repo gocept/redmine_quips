@@ -5,5 +5,5 @@ quips.
 
 == Installation
 
- * script/plugin install http://svn.gocept.com/repos/gocept/redmine_quips/trunk
+ * script/plugin install http://code.gocept.com/svn/gocept/redmine_quips/trunk
  * rake db:migrate:plugins
