@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_quips do
   name 'Redmine Quips plugin'
   author 'Wolfgang Schnerring <ws@gocept.com>'
   description 'Display a random quip below the page header'
-  version '0.0.2'
+  version '0.0.3'
 
   permission :view_quips, { :quips => :index }
   permission :add_quips, { :quips => [:new, :thanks] }
