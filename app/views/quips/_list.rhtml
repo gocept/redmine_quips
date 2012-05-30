@@ -1,4 +1,12 @@
+<% edit_allowed = User.current.allowed_to?(:edit_quips, nil, :global => true) %>
+
 <% for quip in quips %>
-<li><%= quip.text%> <%= link_to_remote(image_tag('delete.png'), :update => "list", :url => { :action => 'destroy', :id => quip }, :confirm => "Are you sure?")%>
+<li>
+<% if edit_allowed %>
+<%= in_place_editor_field(quip, :quip, 'text') %>
+<% else %>
+<%= quip.text %>
+<% end %>
+<%= link_to_remote(image_tag('delete.png'), :update => "list", :url => { :action => 'destroy', :id => quip }, :confirm => "Are you sure?")%>
 </li>
 <% end %>

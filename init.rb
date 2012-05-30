@@ -10,6 +10,7 @@ Redmine::Plugin.register :redmine_quips do
 
   permission :view_quips, { :quips => :index }
   permission :add_quips, { :quips => [:new, :thanks] }
+  permission :edit_quips, { :quips => :set_quip_text }
   permission :delete_quips, { :quips => :destroy }
 end
 
