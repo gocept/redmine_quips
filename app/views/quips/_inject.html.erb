@@ -3,6 +3,6 @@
 quip = render(:partial => "quips/show")
 quip.gsub! '"', '\\"'
 %>
-new Insertion.Top($("sidebar"), "<%= quip %>");
-$("main").removeClassName("nosidebar");
+$("#sidebar").prepend("<%= quip %>");
+$("#main").removeClass("nosidebar");
 </script>
