@@ -1,6 +1,6 @@
 <h2>Add your own clever headline</h2>
 
-<% labelled_tabular_form_for :quip, @quip, :url => { :action => "new" } do |f| %>
+<%= labelled_form_for :quip, @quip, :url => { :action => "new" } do |f| %>
 <%= error_messages_for 'quip' %>
 
 <div class="box">
