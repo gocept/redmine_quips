@@ -2,10 +2,9 @@
 
 <% for quip in quips %>
 <li>
-<% if edit_allowed %>
-<%= in_place_editor_field(quip, :quip, 'text') %>
-<% else %>
 <%= quip.text %>
+<% if edit_allowed %>
+<%= link_to(image_tag('edit.png'), { :action => 'edit', :id => quip })%>
 <% end %>
 <%= link_to(image_tag('delete.png'), { :action => 'destroy', :id => quip }, :method => "post", :confirm => "Are you sure?")%>
 </li>
