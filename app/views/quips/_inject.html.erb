@@ -3,6 +3,6 @@
 quip = render(:partial => "quips/show")
 quip.gsub! '"', '\\"'
 %>
-$("#sidebar").prepend("<%= quip %>");
+$("#sidebar").prepend("<%= raw(quip) %>");
 $("#main").removeClass("nosidebar");
 </script>
