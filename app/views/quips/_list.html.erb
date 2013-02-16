@@ -7,6 +7,6 @@
 <% else %>
 <%= quip.text %>
 <% end %>
-<%= link_to_remote(image_tag('delete.png'), :update => "list", :url => { :action => 'destroy', :id => quip }, :confirm => "Are you sure?")%>
+<%= link_to(image_tag('delete.png'), { :action => 'destroy', :id => quip }, :method => "post", :confirm => "Are you sure?")%>
 </li>
 <% end %>
