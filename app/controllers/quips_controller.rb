@@ -31,7 +31,7 @@ class QuipsController < ApplicationController
       @quip = Quip.find(params[:id])
       @quip.destroy
     end
-    render :partial => "list", :locals => { :quips => Quip.find(:all) }
+    redirect_to :action => 'index'
   end
 
   def authorize(ctrl = params[:controller], action = params[:action])
