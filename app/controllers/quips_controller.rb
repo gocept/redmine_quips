@@ -17,13 +17,12 @@ class QuipsController < ApplicationController
     @quip = Quip.find(params[:id])
   end
 
-  def set_quip_text
-    unless request.post? or request.put? then
-      return render(:text => 'Method not allowed', :status => 405)
-    end
+  def edit
     @quip = Quip.find(params[:id])
-    @quip.update_attribute(:text, params[:value])
-    render :text => CGI::escapeHTML(@quip.text)
+    if request.put? and @quip.update_attributes(params[:quip])
+      flash[:notice] = 'Quip edited successfully.'
+      redirect_to :action => 'index'
+    end
   end
 
   def destroy
